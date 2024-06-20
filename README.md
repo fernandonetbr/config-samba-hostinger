@@ -84,27 +84,6 @@ Para criar um repositório de arquivos, você pode usar o `Samba`, `FTP` ou até
    systemctl restart smbd
    ```
 
-### 5. Acessar o Repositório de Arquivos
-
-Agora que o Samba está configurado, você pode acessar o repositório de arquivos a partir de qualquer computador na mesma rede. 
-
-1. **No Windows**:
-   - Abra o Explorador de Arquivos.
-   - Na barra de endereço, digite: `\\seu_ip_da_vps\FileShare`.
-
-2. **No Linux**:
-   - Use um gerenciador de arquivos que suporte compartilhamentos de rede, como o Nautilus.
-   - Use `smb://seu_ip_da_vps/FileShare` na barra de endereço.
-
-### 6. Configuração Adicional
-
-- **Segurança**: Considere configurar autenticação e permissões mais restritas no Samba para proteger seu repositório de arquivos.
-- **Backup**: Implemente um plano de backup para garantir que seus arquivos estejam seguros.
-
-Seguindo esses passos, você terá uma VPS configurada como um repositório de arquivos usando Samba. Se precisar de funcionalidades mais avançadas ou específicas, pode explorar outras soluções como FTP, NFS, ou até mesmo sistemas de armazenamento em nuvem como Nextcloud.
-
-Para acessar a pasta compartilhada externamente via HTTPS, você precisará configurar um servidor web com suporte a HTTPS (como Apache ou Nginx) e apontar esse servidor web para a pasta que deseja compartilhar. Abaixo, vou descrever como fazer isso usando o servidor web **Nginx** e SSL/TLS para HTTPS.
-
 ### 1. Instalar Nginx
 
 1. **Atualize os pacotes do sistema**:
