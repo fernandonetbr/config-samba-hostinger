@@ -296,6 +296,13 @@ Agora, ao acessar `https://sua_dominio.com`, você será solicitado a inserir um
   tail -f /var/log/nginx/error.log
   ```
 
+- **Exluir usuário**: Para excluir usuário criado atráves desse comando "htpasswd -c /etc/nginx/.htpasswd usuario" siga os passos abaixo:       
+ ```bash
+  Abra o arquivo .htpasswd para edição:
+  Você pode usar qualquer editor de texto, como vi, vim, nano, etc: sudo nano /etc/nginx/.htpasswd
+  As linhas no arquivo .htpasswd têm o formato usuario:senha_hash. Simplesmente delete a linha inteira que contém o nome do usuário que você deseja remover.
+  Salvar e sair do editor.  
+  ```
 ### Conclusão
 
 Seguindo esses passos, você configurou um repositório de arquivos acessível externamente via HTTPS com autenticação básica, utilizando uma VPS na Hostinger. Essa configuração garante que seus arquivos estejam protegidos por criptografia SSL e também por um mecanismo de autenticação básica.
