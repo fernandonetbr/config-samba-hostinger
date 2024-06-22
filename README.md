@@ -154,6 +154,7 @@ Para fornecer HTTPS, você pode usar Let's Encrypt para obter um certificado SSL
 2. **Obtenha e instale o certificado SSL**:
    ```bash
    certbot --nginx -d sua_dominio.com  # Substitua pelo seu domínio
+   certbot --nginx -d seudominio.com -d subdominio.seudominio.com # Substitua pelo seu domínio e subdomínio
    ```
 
 3. **Siga as instruções para concluir a configuração**. Certbot irá automaticamente configurar o Nginx para usar HTTPS.
